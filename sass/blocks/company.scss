@@ -1,0 +1,70 @@
+.company {
+  padding: 33px 0 37px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(/img/hand.png) no-repeat;
+    background-size: 474px 599px;
+    width: 474px;
+    height: 599px;
+    left: 0;
+    top: -24px;
+    z-index: 100;
+  }
+  @include breakpoint(desktop) {
+    &::before {
+      left: -125px;
+    }
+  }
+  @include breakpoint(tablet) {
+    &::before {
+      background: none;
+    }
+  }
+}
+
+.company__inner {
+  width: 960px;
+  padding: 0 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include breakpoint(laptop) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.company__about {
+  padding-left: 350px;
+  @include breakpoint(tablet) {
+    padding-left: 0;
+  }
+}
+
+.company__title,
+.company__text-wrapper {
+  padding-left: 16px;
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
+}
+
+.company__title {
+  @include font(33px, 1, normal);
+  margin-bottom: 13px;
+  @include breakpoint(tablet) {
+    text-align: center;
+  }
+}
+
+.company__text {
+  margin-bottom: 21px;
+  color: $grey;
+  @include breakpoint(tablet) {
+    text-align: justify;
+  }
+  @include breakpoint(mobile) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,25 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 470px;
+  margin: 0 auto;
+  height: 120px;
+  align-items: center;
+}
+
+.contacts__title {
+  @include font(33px, 1, normal);
+  width: 190px;
+  text-align: center;
+  padding-top: 5px;
+  margin-right: 11px;
+}
+
+.contacts__info {
+  @include font(15px, 1.4, normal);
+  padding-top: 8px;
+  span {
+    display: block;
+  }
+}

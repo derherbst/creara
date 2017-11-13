@@ -1,0 +1,93 @@
+.activity {
+  background-color: $lightGrey;
+  padding: 25px 0 40px;
+}
+
+.activity__inner {
+  width: 960px;
+//  padding: 0 5px;
+  margin: 0 auto;
+  @include breakpoint(laptop) {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+.activity__title {
+  @include font(33px, 1, normal);
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.activity__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  @include breakpoint(laptop) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.activity__item {
+  width: 162px;
+  position: relative;
+  padding-top: 133px;
+  background: no-repeat top center;
+  &--traffick {
+    background-image: url(/img/traffick.png);
+    background-position: center 28px;
+  }
+  &--platform {
+    background-image: url(/img/platform.png);
+    background-position: center 24px;
+  }
+  &--callcenter {
+    background-image: url(/img/callcenter.png);
+  }
+  &--services {
+    background-image: url(/img/services.png);
+  }
+  &--shared {
+    background-image: url(/img/shared.png);
+  }
+  @include breakpoint(laptop) {
+    width: 100%;
+    height: 150px;
+    padding-top: 0;
+    padding-left: 170px;
+    box-sizing: border-box;
+    background-position: left center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  @include breakpoint(tablet) {
+    &--traffick {
+      background-position: 20px center;
+    }
+    &--callcenter {
+      background-position: 20px center;
+    }
+    &--services {
+      background-position: 20px center;
+    }
+    &--shared {
+      background-position: 40px center;
+    }
+  }
+}
+
+.activity__item-text {
+  @include font(13px, 1.4, normal);
+  text-align: center;
+  @include breakpoint(laptop) {
+    text-align: left;
+//    line-height: 150px;
+    br {
+      display: none;
+    }
+  }
+}

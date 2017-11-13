@@ -1,0 +1,81 @@
+.commerce {
+  padding: 22px 0;
+}
+
+.commerce__inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 960px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  @include breakpoint(laptop) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.commerce__about {
+  width: 320px;
+  @include breakpoint(laptop) {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.commerce__title {
+  @include font(27px, 1.2, normal);
+  margin-bottom: 10px;
+}
+
+.commerce__text {
+  @include font(15px, 1.4, normal);
+  color: $grey;
+  @include breakpoint(laptop) {
+    br:last-child {
+      display: none;
+    }
+  }
+}
+
+.commerce__list {
+  width: 590px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  @include breakpoint(laptop) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.commerce__item {
+  padding-top: 142px;
+  width: 190px;
+  background: no-repeat top center;
+  p {
+    padding: 0 15px;
+    text-align: center;
+  }
+  &--partner {
+    background-image: url(/img/feat-partners.png);
+  }
+  &--mobile {
+    background-image: url(/img/feat-mob.png);
+  }
+  &--dev {
+    background-image: url(/img/feat-dev.png);
+  }
+  @include breakpoint(mobile) {
+    background-size: 100px auto;
+    background-position: center 20px;
+  }
+}

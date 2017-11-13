@@ -1,0 +1,53 @@
+.page-header {
+  min-height: 70px;
+  max-height: 300px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .4);
+  @include breakpoint(mobile) {
+    box-shadow: none;
+  }
+}
+
+.page-header__logo {
+  @include font(33px, 1, bold);
+  display: block;
+  text-decoration: none;
+  color: $greyLight;
+  margin-top: 7px;
+  margin-left: 5px;
+  span {
+    color: $skyBlue;
+    display: inline-block;
+    padding-right: 10px;
+  }
+  @include breakpoint(tablet) {
+    font-size: 24px;
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+}
+
+.page-header__inner {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 5px;
+  display: flex;
+  min-height: 70px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  @include breakpoint(laptop) {
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.page-header__language {
+  @include font(13px, 1.3, normal);
+}

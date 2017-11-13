@@ -1,18 +1,16 @@
 html {
-  font-size: 16px;
-//  line-height: 1.25rem;
-  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: normal;
 }
 
 body {
   margin: 0px;
   padding: 0px;
   min-width: 320px;
-  margin: 0 auto;
-  font-family: 'Circe_bold', sans-serif;
-  color: #212121;
-  position: relative;
-  background: #f9c0a7;
+  font-family: 'PT Sans', sans-serif;
+  color: $green;
+  background: $white;
 }
 
 h1,
